@@ -40,11 +40,12 @@ const Products = (props) => {
         {products.map((p) => {
           return (
             <ProductItem
+              image={p.images[0]}
               key={p.id}
               id={p.id}
               title={p.title}
               price={p.price}
-              quantity={p.quantity}
+              quantity={p.stock}
               description={p.description}
             />
           );
@@ -57,7 +58,7 @@ const Products = (props) => {
 export default Products;
 export const loader = async () => {
   const response = await fetch("https://dummyjson.com/products");
-  console.log(`${response.data}`);
+  console.log(`${response}`);
   if (!response.ok) {
     throw new response(
       JSON.stringify({ message: "there is error" }, { status: 500 })

@@ -7,7 +7,7 @@ const MainHeader = (props) => {
 
   return (
     <header className={classes.header}>
-      <h1>ReduxCart</h1>
+      <h1>Zahra's Store</h1>
       <nav>
         <ul className={classes.link}>
           <li>

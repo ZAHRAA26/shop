@@ -6,11 +6,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #252424;
+  background-color: #d3d467;
 }
 
 .header h1 {
-  color: white;
+  color: #c3920d;
 }
 
 .header ul {
@@ -23,8 +23,9 @@
   display: flex;
   flex-direction: row;
   font-size: 17px;
-  color: aqua;
+  color: #c3920d;
+  text-decoration: none;
 }
 .active {
-  color: red;
+  color: #a74cc5;
 }

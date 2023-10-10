@@ -18,18 +18,19 @@ function App() {
       errorElement: <Error />,
       children: [
         {
-          path: "/products",
-          element: <Products />,
-          loader: productsLoader,
+          path: "products",
+          children: [
+            { index: true, element: <Products />, loader: productsLoader },
+            {
+              path: ":productId",
+              loader: productDetailsLoader,
+              element: <ProductDetails />,
+            },
+          ],
         },
         {
-          path: "/cart",
+          path: "cart",
           element: <Cart />,
-        },
-        {
-          path: "/products/:id",
-          element: <ProductDetails />,
-          loader: productDetailsLoader,
         },
       ],
     },
